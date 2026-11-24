@@ -1,0 +1,6 @@
+{
+  "name": "Transporte JUVASA",
+  "description": "Transporte privado, turístico y ejecutivo en Lima y todo el Perú. Flota moderna con GPS 24/7, traslados al Aeropuerto Jorge Chávez y atención multilingüe.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
