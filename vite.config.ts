@@ -26,6 +26,15 @@ export default defineConfig(() => {
           if (fs.existsSync(distDir) && fs.existsSync(srcAssets)) {
             fs.cpSync(srcAssets, distAssets, {recursive: true, force: true});
           }
+          if (fs.existsSync(distDir)) {
+            const indexPath = path.resolve(distDir, 'index.html');
+            const notFoundPath = path.resolve(distDir, '404.html');
+            const noJekyllPath = path.resolve(distDir, '.nojekyll');
+            if (fs.existsSync(indexPath)) {
+              fs.copyFileSync(indexPath, notFoundPath);
+            }
+            fs.writeFileSync(noJekyllPath, '');
+          }
         },
       },
     ],
